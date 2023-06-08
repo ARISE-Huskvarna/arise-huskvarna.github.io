@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stadsjakt - ARISE Challenge</title>
+    <link href="/index.css" rel="stylesheet">
+    <link rel="icon" href="/logo.svg">
+</head>
+<body>
+    <template id="template-image">
+        <li data-i="1">
+            <h2>Bild 1</h2>
+            <img src="/bilder/1.jpg">
+        </li>
+    </template>
+
+    <nav id="navbar">
+        <img src="logo.svg" alt="ARISE">
+        <a href="sms:0704822385"><span>SMS:a Linus</span></a>
+        <span id="points">0/0</span>
+    </nav>
+
+    <ol id="images"></ol>
+
+    <dialog id="dialog-image-action">
+        <form method="dialog">
+            <h2>Markera som</h2>
+            <button type="submit" id="btn-image-action-mark-not-sent">Inte skickad</button>
+            <button type="submit" id="btn-image-action-mark-sent">Skickad</button>
+            <button type="submit" id="btn-image-action-mark-accepted">Godkänd</button>
+        </form>
+    </dialog>
+
+    <script src="/index.js"></script>
+</body>
+</html>

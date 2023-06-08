@@ -1,0 +1,114 @@
+@font-face {
+    font-family: "Montserrat";
+    src: local("Montserrat"), url("/font/Montserrat-VariableFont_wght.ttf") format("TrueType");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    background-color: var(--color-bg);
+    color: white;
+
+    --navbar-height: 50px;
+    --color-bg: #2c2e35;
+    --color-accent: #7c0051;
+
+    color-scheme: dark;
+
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+
+nav#navbar {
+    height: var(--navbar-height);
+    position: fixed;
+    background-color: var(--color-accent);
+    top: 0;
+    width: 100%;
+    display: flex;
+}
+nav#navbar > * {
+    line-height: var(--navbar-height);
+    font-weight: 700;
+    font-size: 1.5em;
+}
+nav#navbar > img {
+    height: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+nav#navbar > a {
+    text-decoration: none;
+    color: inherit;
+    flex-grow: 1;
+    width: 0;
+    text-align: center;
+}
+nav#navbar > a > span {
+    background-color: var(--color-bg);
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+nav#navbar > span {
+    padding: 0 10px;
+}
+
+ol#images {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    margin-top: var(--navbar-height);
+}
+
+ol#images > li {
+    --border-color: white;
+    background-color: var(--color-accent);
+    border: 5px solid var(--border-color);
+    border-radius: 10px;
+    transition: border-color 0.3s;
+}
+ol#images > li.sent {
+    --border-color: gold;
+}
+ol#images > li.accepted {
+    --border-color: green;
+}
+ol#images > li > h2 {
+    margin: 0;
+    padding: 5px;
+}
+ol#images > li > img {
+    width: 100%;
+}
+
+dialog#dialog-image-action {
+    width: 75vw;
+    font-size: 1.5em;
+    background-color: var(--color-bg);
+    color: inherit;
+}
+dialog#dialog-image-action form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+dialog#dialog-image-action h2 {
+    margin: 0;
+}
+dialog#dialog-image-action button {
+    font-size: inherit;
+    padding: 5px;
+    background-color: var(--color-accent);
+    border: 5px solid white;
+    border-radius: 10px;
+}
+dialog#dialog-image-action button#btn-image-action-mark-sent {
+    border-color: gold;
+}
+dialog#dialog-image-action button#btn-image-action-mark-accepted {
+    border-color: green;
+}
